@@ -2,6 +2,27 @@
 
 This Todo List App is configured to work with Firebase Firestore for data persistence. Follow these steps to set up Firebase:
 
+## 🚀 Replit Setup (Recommended)
+
+If you're using Replit, the Firebase API Keys should be stored in the **Secrets Tab**:
+
+### Setting up Secrets in Replit:
+
+1. In your Replit project, click on the **Secrets** tab (lock icon) in the left sidebar
+2. Add the following secrets with your Firebase configuration values:
+
+```
+REPLIT_FIREBASE_API_KEY = your_api_key_here
+REPLIT_FIREBASE_AUTH_DOMAIN = your_project_id.firebaseapp.com
+REPLIT_FIREBASE_PROJECT_ID = your_project_id
+REPLIT_FIREBASE_STORAGE_BUCKET = your_project_id.appspot.com
+REPLIT_FIREBASE_MESSAGING_SENDER_ID = your_sender_id
+REPLIT_FIREBASE_APP_ID = your_app_id
+```
+
+3. The app will automatically use these secrets when running in Replit
+4. No need to create a `.env.local` file in Replit
+
 ## 1. Create a Firebase Project
 
 1. Go to [Firebase Console](https://console.firebase.google.com/)
@@ -26,6 +47,8 @@ This Todo List App is configured to work with Firebase Firestore for data persis
 
 ## 4. Set Environment Variables
 
+### For Local Development (Non-Replit):
+
 Create a `.env.local` file in the root directory with your Firebase config:
 
 ```env
@@ -36,6 +59,10 @@ NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET=your_project_id.appspot.com
 NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID=your_sender_id
 NEXT_PUBLIC_FIREBASE_APP_ID=your_app_id
 ```
+
+### For Replit:
+
+Use the Secrets Tab as described above. The app will automatically detect and use the Replit secrets.
 
 ## 5. Install Dependencies
 
